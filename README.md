@@ -1,23 +1,16 @@
-# minima
-
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
-
-***Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled
-within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your
-version. e.g. https://github.com/jekyll/minima/blob/v2.5.0/README.md*  
-*Running `bundle show minima` will provide you with the local path to your current theme version.*
+# Jekyll lin theme
 
 
-[Theme preview](https://jekyll.github.io/minima/)
 
-![minima theme preview](/screenshot.png)
+[Theme preview](https://github.com/ssokurenko/jekyll-lin-theme)
+
 
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
-gem "minima"
+gem "lin"
 ```
 
 And then execute:
@@ -27,7 +20,7 @@ And then execute:
 
 ## Contents At-A-Glance
 
-Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+Lin has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
 
 ### Layouts
 
@@ -41,12 +34,6 @@ Refers to files within the `_layouts` directory, that define the markup for your
 #### Home Layout
 
 `home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
-
-##### *Main Heading and Content-injection*
-
-From Minima v2.2 onwards, the *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
-
-Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
 
 ##### *Post Listing*
 
@@ -66,16 +53,6 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
   - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
   - `social.html` &mdash; Renders social-media icons based on the `minima:social_links` data in the config file.
-
-
-### Sass
-
-Refers to `.scss` files within the `_sass` directory that define the theme's styles.
-
-  - `minima.scss` &mdash; The core file imported by preprocessed `css/style.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
-  - `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
-  - `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
-  - `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
 
 
 ### Assets
