@@ -1,8 +1,9 @@
 <div class="row">
-  <div class="col-md-6 has-space-top has-space-bottom">
-    {{ site.copyright | escape }}
+  <div class="col-md-4 has-space-top has-space-bottom">
+    {{ site.copyright | escape }}, styled with <a href="https://lin-css.netlify.com/">lin.css</a>
   </div>
-  <div class="col-md-6 has-space-top has-space-bottom text-right">
-    Styled with <a href="https://lin-css.netlify.com/">lin.css</a>
+  <div class="col-md-8 has-space-top has-space-bottom text-right">
+    {%- include social.html -%}
+    <div class="spacer"></div>
   </div>
 </div>

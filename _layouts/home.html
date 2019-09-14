@@ -28,16 +28,16 @@ layout: default
       {%- endfor -%}
     </div>
     <div class="col-md-4">
-      <p>{{ site.description | escape }}</p>
-      <div class="social">
-        {%- include social.html -%}
+      <div class="has-space-bottom">
+        {{ site.description | escape }}
       </div>
+      {%- include social.html -%}
     </div>
   </div>
 
   <p>
     <a href="{{ 'feed.xml' | relative_url }}">
-      RSS
+      <span class="lin-icon-rss"></span>
     </a>
   </p>
   {%- endif -%}
