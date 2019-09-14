@@ -13,8 +13,14 @@
   </a>
   {%- endif -%}
 
-  {%- if social.youtube -%}
-  <a href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" rel="nofollow">
+  {%- if social.youtube_user -%}
+  <a href="https://www.youtube.com/user/{{ social.youtube_user | cgi_escape | escape }}" rel="nofollow">
+    <span class="lin-icon-youtube"></span>
+  </a>
+  {%- endif -%}
+
+  {%- if social.youtube_channel -%}
+  <a href="https://www.youtube.com/c/{{ social.youtube_user | cgi_escape | escape }}" rel="nofollow">
     <span class="lin-icon-youtube"></span>
   </a>
   {%- endif -%}
