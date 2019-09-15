@@ -2,7 +2,7 @@
   <div class="col-md-8 has-space-top has-space-bottom">
     <a class="lin-logo" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
   </div>
-  <div class="col-md-4 is-flex-center">
+  <div class="col-md-4 is-flex-center is-flex-end">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
