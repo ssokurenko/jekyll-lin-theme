@@ -1,5 +1,5 @@
 Gem::Specification.new do |spec|
-  spec.name          = "lin"
+  spec.name          = "jekyll-lin"
   spec.version       = "1.0.0"
   spec.authors       = ["Sergey Sokurenko"]
   spec.email         = ["email@example.com"]
