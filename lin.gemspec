@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Gem::Specification.new do |spec|
   spec.name          = "lin"
   spec.version       = "1.0.0"

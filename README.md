@@ -1,8 +1,17 @@
 # Jekyll lin theme
 
+A slick minimalist theme for Jekyll built with [lin.css](https://lin-css.netlify.com/).
 
+[Theme preview](https://jekyll-lin-theme.netlify.com)
 
-[Theme preview](https://github.com/ssokurenko/jekyll-lin-theme)
+## Quick start
+
+1. Fork the this repository
+2. Update the `_config.yml` file with your settings
+3. Update the content at the `_posts` folder and the pages at the root (`about.md`, `contact.md`)
+4. Commit and push the changes to your repository and follow the instructions to deploy your website to:
+  - [Github pages](https://jekyllrb.com/docs/github-pages/)
+  - or [Netlify](https://www.netlify.com/blog/2017/05/11/migrating-your-jekyll-site-to-netlify/)
 
 
 ## Installation
@@ -18,10 +27,6 @@ And then execute:
     $ bundle
 
 
-## Contents At-A-Glance
-
-Lin has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
-
 ### Layouts
 
 Refers to files within the `_layouts` directory, that define the markup for your theme.
@@ -35,14 +40,6 @@ Refers to files within the `_layouts` directory, that define the markup for your
 
 `home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
 
-##### *Post Listing*
-
-This section is optional from Minima v2.2 onwards.<br/>
-It will be automatically included only when your site contains one or more valid posts or drafts (if the site is configured to `show_drafts`).
-
-The title for this section is `Posts` by default and rendered with an `<h2>` tag. You can customize this heading by defining a `list_title` variable in the document's front matter.
-
-
 ### Includes
 
 Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
@@ -52,7 +49,7 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
   - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
   - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
-  - `social.html` &mdash; Renders social-media icons based on the `minima:social_links` data in the config file.
+  - `social.html` &mdash; Renders social-media icons based on the `lin:social_links` data in the config file.
 
 
 ### Assets
@@ -62,18 +59,12 @@ Contains the `css/style.scss` that imports sass files from within the `_sass` di
 
 This directory can include sub-directories to manage assets of similar type (`img`, `fonts`, `svg`), and will be copied over as is, to the final transformed site directory.
 
-
-### Plugins
-
-Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
-
-
 ## Usage
 
 Have the following line in your config file:
 
 ```yaml
-theme: minima
+theme: lin
 ```
 
 
@@ -96,67 +87,15 @@ The site's default CSS has now moved to a new place within the gem itself, [`ass
   - Copy the `assets/` folder from there into the root of `<your-site>`
   - Change whatever values you want, inside `<your-site>/assets/css/style.scss`
 
-
-When you override only a minima-sass-partial, it is not automatically imported because we're still importing the `minima.scss` within the theme-gem and that subsequently imports the partials with respect to itself, i.e. partials within the gem. Hence you should either include a *copy of `minima.scss` from the gem* inside the `_sass` directory at source or the overriding `/assets/css/style.scss` file should explicitly import the edited partial. :
-  e.g. To have an **edited** `_syntax-highlighting.scss` be rendered, you should either have
-
-```sass
-/* <your-site>/assets/css/style.scss */
-
-@import "minima";
-@import "minima/syntax-highlighting";
-```
-or
-your `<your-site>/_sass/` should look like:
-
-```
-.
-├── minima.scss
-└── minima
-    └── _syntax-highlighting.scss
-```
-
-To have your CSS overrides in sync with upstream changes released in future versions, collect all your overrides into a single partial sass-file and then import that partial after importing minima, like so:
-
-```sass
-/* <your-site>/assets/css/style.scss */
-
-@import "minima";
-@import "my_overrides";
-```
-
-
-### Customize navigation links
-
-This allows you to set which pages you want to appear in the navigation area and configure order of the links.
-
-For instance, to only link to the `about` and the `portfolio` page, add the following to your `_config.yml`:
-
-```yaml
-header_pages:
-  - about.md
-  - portfolio.md
-```
-
-
 ### Change default date format
 
-You can change the default date format by specifying `site.minima.date_format`
+You can change the default date format by specifying `site.lin.date_format`
 in `_config.yml`.
-
-```
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
-```
-
 
 ### Add your favicons
 
 1. Head over to [https://realfavicongenerator.net/](https://realfavicongenerator.net/) to add your own favicons.
 2. [Customize](#customization) default `_includes/head.html` in your source directory and insert the given code snippet.
-
 
 ### Enabling comments (via Disqus)
 
@@ -181,36 +120,27 @@ If you don't want to display comments for a particular post you can disable them
 ### Social networks
 
 You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config.
-From `Minima-3.0` onwards, the usernames are to be nested under `minima.social_links`, with the keys being simply the social-network's name:
+From `Minima-3.0` onwards, the usernames are to be nested under `lin.social_links`, with the keys being simply the social-network's name:
 
 ```yaml
 minima:
   social_links:
     twitter: jekyllrb
-    github: jekyll
+    github:  jekyll
+    medium:  jekyll
+    rss: rss
     dribbble: jekyll
     facebook: jekyll
-    flickr: jekyll
+    flickr:   jekyll
     instagram: jekyll
     linkedin: jekyll
     pinterest: jekyll
+    youtube_user: jekyll
+    youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
     telegram: jekyll
     googleplus: +jekyll
-    microdotblog: jekyll
     keybase: jekyll
-    rss: rss
-
-    mastodon:
-     - username: jekyll
-       instance: example.com
-     - username: jekyll2
-       instance: example.com
-
-    youtube: jekyll
-    youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    youtube_channel_name: CloudCannon
 ```
-
 
 ### Enabling Google Analytics
 
@@ -233,7 +163,7 @@ show_excerpts: true
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/ssokurenko/jekyll-lin-theme](https://github.com/ssokurenko/jekyll-lin-theme). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
